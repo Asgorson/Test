@@ -2,14 +2,17 @@ import java.util.Scanner;
 public class TestJava {
     public static void main (String args[]){
         //----вывод всех символов кода UTF - 16------------//
-        /*char Ch = 0;
+        /*
+        char Ch = 0;
         for (int i=0; i<128; i++){
             Ch = (char)i;
             System.out.print("Nubmer of char: "+i); 
             System.out.println(" Char: " + Ch);
         }*/
+
         //-------------------------------------------------------------//
         //--------------Пример привдения типов--------------------------//
+        /*
         int  i = 32322; 
         short b = 32000;
         short c = 0;  
@@ -43,12 +46,32 @@ public class TestJava {
         System.out.print("Input text: ");
         String text=in.nextLine();
         System.out.printf("Text is: %s", text);
-        in.close();
-        //---------------------------------------------------------------//
-        //---------------------Работа с арифметическими операциями-------//
-        
-        //---------------------------------------------------------------//
+        in.close();*/
 
+        //---------------------------------------------------------------//
+        //---------------------Работа с условным оператором If{} else{} -------//
+        int num_1=25, num_2=15; 
+        /*
+        if (num_1<num_2){
+            System.out.println("Первое меньше второго.");
+        }else {
+            if (num_1>num_2){
+                System.out.println("Первое больше второго.");
+            }
+            else {
+                System.out.println("Два числа равны.");
+            }
+        }*/
+
+        //---------------------------Использование оператора else if {}
+        if (num_1<num_2){
+            System.out.println("Первое меньше второго.");
+        } else if(num_1>num_2){
+            System.out.println("Первое больше второго.");
+        } else{
+            System.out.println("Два числа равны.");
+        }
+        //---------------------------------------------------------------//
     }
     
 }
