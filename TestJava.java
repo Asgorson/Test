@@ -23,10 +23,27 @@ public class TestJava {
         float pi = 3.1428f;
         double g = 1.12345342342;
         int f = 123;  
-        System.out.printf("Pi num: %.3f \tG Num: %e \tint Num: %d", pi, g, f);
+        System.out.printf("Pi num: %.3f \tG Num: %e \tint Num: %d\n", pi, g, f);
 
         //----------------------------------------------------------------//
         //---------------------------ввод с консоли-------------------//
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("Input an Int number: "); 
+        int num = in.nextInt(); 
+        System.out.printf("Num is: %d\n", num); 
+
+        System.out.print("Inup a float number: "); 
+        float fl = in.nextFloat();
+        System.out.print("Input something: \n");
+        in.nextLine(); 
+        String smth = in.nextLine();
+        System.out.printf("Num is: %.3f\t String is: %s\n", fl, smth);
+
+        System.out.print("Input text: ");
+        String text=in.nextLine();
+        System.out.printf("Text is: %s", text);
+        in.close();
         //---------------------------------------------------------------//
     }
     
