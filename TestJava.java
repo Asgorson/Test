@@ -1,4 +1,6 @@
+import packtest.*; // пример импорта созданного класса, см. папка Package
 import java.util.Scanner;
+
 public class TestJava {
     public static void main (String args[]){
         /*
@@ -143,26 +145,41 @@ public class TestJava {
             }
         }catch(Exception ex){
             System.out.printf(ex.getMessage());
-        }*/
+        }
+        //--------------------------------------------------------//
+        */
+        /*
+        //--------------------работа с классом------------------//
         Password SitePass = new Password();
         SitePass.AddPass();
         SitePass.ShowData(); 
         Password SitePass_2 = new Password(2);
-        SitePass_2.ShowData();   
+        SitePass_2.ShowData();
+        //------------------------------------------------------//   
+        */
+        //-------------------Работа с созданным импортом-------------//
+        Func("Bane", 14);
+        JavaPackage body = new JavaPackage(12,15); 
+        body.showResult(); 
+        body.mass = 22; 
+        body.height = 30; 
+        body.showResult();
+        //-----------------------------------------------------------//
     }
-        
-//----------------------Работа с методами----------------------------------------------//
+       
+    //----------------------Работа с методами------------------------------------------//
     static int SimpleFunc(int first, int second){
         return first+second; 
     }
     static void Func(String Name, int Age){
-        System.out.printf("Name: %s\tAge: %d", Name, Age);
+        System.out.printf("Name: %s\tAge: %d\n", Name, Age);
     }
     //---------------------------------------------------------------------------------//
+
 }
 
  //------------------------Работа с классами----------------------------------------//
- class Password{ //обявление класса происходит вне главного класса, вроде очевидно но при первом изучении не понятно
+class Password{ //обявление класса происходит вне главного класса, вроде очевидно, но при первом изучении не понятно
     public 
             String passName;
             int ID;  
@@ -192,7 +209,6 @@ public class TestJava {
     }
     void ShowData(){
         System.out.printf("ID: %d\t Site: %s\t Pass: %s\n", ID, passName, pass);
-    }
-    
+    }   
 }
 //---------------------------------------------------------------------------------//
