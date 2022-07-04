@@ -1,4 +1,3 @@
-import javax.sql.rowset.serial.SerialStruct;
 import java.util.Scanner;
 public class TestJava {
     public static void main (String args[]){
@@ -145,10 +144,14 @@ public class TestJava {
         }catch(Exception ex){
             System.out.printf(ex.getMessage());
         }*/
-
+        Password SitePass = new Password();
+        SitePass.AddPass();
+        SitePass.ShowData(); 
+        Password SitePass_2 = new Password(2);
+        SitePass_2.ShowData();   
     }
         
-//----------------------Работа с методами------------------------------------------//
+//----------------------Работа с методами----------------------------------------------//
     static int SimpleFunc(int first, int second){
         return first+second; 
     }
@@ -156,5 +159,40 @@ public class TestJava {
         System.out.printf("Name: %s\tAge: %d", Name, Age);
     }
     //---------------------------------------------------------------------------------//
+}
+
+ //------------------------Работа с классами----------------------------------------//
+ class Password{ //обявление класса происходит вне главного класса, вроде очевидно но при первом изучении не понятно
+    public 
+            String passName;
+            int ID;  
+    private 
+            String pass;
+
+    { // нициализатор, общий для всех конструкторов
+        passName="undefind";
+        ID=10;
+        pass=" ";
+    }
+
+    Password(int num){ //конструктор 1
+        this.ID=num; 
+    }
+    Password(){ //конструктор 2
+
+    }
+    void AddPass(){
+        System.out.printf("Input Site for password.\n");
+        Scanner in=new Scanner(System.in);
+        passName=in.nextLine(); 
+        ID++; 
+        System.out.printf("Input pass:");  
+        pass=in.nextLine();
+        in.close();
+    }
+    void ShowData(){
+        System.out.printf("ID: %d\t Site: %s\t Pass: %s\n", ID, passName, pass);
+    }
     
 }
+//---------------------------------------------------------------------------------//
