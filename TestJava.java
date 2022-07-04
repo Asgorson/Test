@@ -1,4 +1,5 @@
-//import java.util.Scanner;
+import javax.sql.rowset.serial.SerialStruct;
+import java.util.Scanner;
 public class TestJava {
     public static void main (String args[]){
         /*
@@ -117,12 +118,37 @@ public class TestJava {
         Func("Pavel", 12);
         //-------------------------------------------------------//
         */
+        /*
         //-----------------Обработка исключений------------------//
-
+        try {
+            int arr[] = new int[6]; 
+            arr[5] = 45; 
+            System.out.printf("Arr[%d]: %d\n", 5,arr[5]);
+        }catch(Exception ex){//можно созадвать несколько catch() для обработки разных исключений
+            ex.printStackTrace();
+            System.out.printf("Error. Out of bound.\n");
+        }finally{ // необязательный параметр
+            System.out.printf("'Finally' block.\n");
+        }
+        System.out.printf("Programm is over.\n"); 
         //-------------------------------------------------------//
+        */
+        /*
+        //----------------Создание собственного исключения--------//
+        try{
+            Scanner In = new Scanner(System.in); 
+            int B = In.nextInt();
+            In.close(); 
+            if (B>100){
+                throw new Exception("Введенное число больше 100!"); 
+            }
+        }catch(Exception ex){
+            System.out.printf(ex.getMessage());
+        }*/
 
     }
-    //----------------------Работа с методами------------------------------------------//
+        
+//----------------------Работа с методами------------------------------------------//
     static int SimpleFunc(int first, int second){
         return first+second; 
     }
@@ -130,6 +156,5 @@ public class TestJava {
         System.out.printf("Name: %s\tAge: %d", Name, Age);
     }
     //---------------------------------------------------------------------------------//
-
     
 }
