@@ -5,6 +5,29 @@ package packtest;
 
 public class JavaPackage{
     public int mass, height;
+    private static int ID =0; 
+
+    {//инициализатор может быть статическим для определения статических переменных 
+        mass = 0; 
+        height = 0; 
+    }
+    public JavaPackage (){
+        ID++; 
+    }
+    public JavaPackage(int mass, int height){
+        ID++;
+        this.mass=mass; 
+        this.height=height; 
+    }
+    public void showResult(){//методы вызываются в исходном файле см. TestJava.java
+        System.out.printf("ID: %d\tBody mass: %d\tBody height: %d\n",ID, mass, height);
+    }
+
+    public static int sum(int f1, int f2){
+
+        return f1+f2;
+    }
+
 
     public static void main(String args[]){
         /*
@@ -13,16 +36,5 @@ public class JavaPackage{
         java.sql.Date sqlDate = new java.sql.Date(0); 
         //---------------------------------------------------------------------------------------------//
         */
-    }
-
-    public JavaPackage (){
-
-    }
-    public JavaPackage(int mass, int height){
-        this.mass=mass; 
-        this.height=height; 
-    }
-    public void showResult(){//методы вызываются в исходном файле см. TestJava.java
-        System.out.printf("Body mass: %d\tBody height: %d\n", mass, height);
     }
 }

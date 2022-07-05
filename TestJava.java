@@ -148,23 +148,32 @@ public class TestJava {
         }
         //--------------------------------------------------------//
         */
+        //Func("Bane", 14);
         /*
         //--------------------работа с классом------------------//
         Password SitePass = new Password();
         SitePass.AddPass();
-        SitePass.ShowData(); 
+        SitePass.ShowData();  
         Password SitePass_2 = new Password(2);
         SitePass_2.ShowData();
         //------------------------------------------------------//   
         */
+        /*
         //-------------------Работа с созданным импортом-------------//
-        Func("Bane", 14);
         JavaPackage body = new JavaPackage(12,15); 
         body.showResult(); 
         body.mass = 22; 
         body.height = 30; 
         body.showResult();
+        JavaPackage body2 = new JavaPackage(); 
+        body2.showResult();
         //-----------------------------------------------------------//
+        */
+        /*
+        //------------------импорт + работа со статическим методом------//
+        System.out.printf("Result of sum: %d", JavaPackage.sum(2,3)); // как видно не создается объект класса
+        //--------------------------------------------------------------//
+        */
     }
        
     //----------------------Работа с методами------------------------------------------//
@@ -180,13 +189,11 @@ public class TestJava {
 
  //------------------------Работа с классами----------------------------------------//
 class Password{ //обявление класса происходит вне главного класса, вроде очевидно, но при первом изучении не понятно
-    public 
-            String passName;
-            int ID;  
-    private 
-            String pass;
+    public String passName;
+    public int ID;  
+    private String pass;
 
-    { // нициализатор, общий для всех конструкторов
+    { // инициализатор, общий для всех конструкторов, может быть статическим 
         passName="undefind";
         ID=10;
         pass=" ";
