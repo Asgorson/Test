@@ -123,12 +123,12 @@ public class TestJava {
         //-----------------Обработка исключений------------------//
         try {
             int arr[] = new int[6]; 
-            arr[5] = 45; 
+            arr[6] = 45; 
             System.out.printf("Arr[%d]: %d\n", 5,arr[5]);
         }catch(Exception ex){//можно созадвать несколько catch() для обработки разных исключений
             ex.printStackTrace();
             System.out.printf("Error. Out of bound.\n");
-        }finally{ // необязательный параметр
+        }finally{ // необязательный параметр, выполняется в любом случае, есть икслючение или нет. 
             System.out.printf("'Finally' block.\n");
         }
         System.out.printf("Programm is over.\n"); 
