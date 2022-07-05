@@ -15,7 +15,9 @@ public class ClassWork {
         laptop.SetData("Acer",12, "Intel", 1200);
         laptop.ShowData();
         changeData(laptop);//передается копия ссылки на объект
-        laptop.ShowData(); 
+        laptop.ShowData();
+        Laptop lap = new Laptop();
+        lap.ShowData();
     }
     static void changeData(Laptop lt){ //передается копия ссылки на объект 
 
@@ -42,6 +44,6 @@ class Laptop{
         this.price=price;
     }
     public void ShowData(){
-        System.out.printf("LapTop data:\n Model name: %s\t Mass: %d\t Company: %s Price: %d\n", modelName, mass, Company, price);
+        System.out.printf("LapTop data:\n Model name: %s\t Mass: %d\t Company: %s\t Price: %d\n", modelName, mass, Company, price);
     }
 }
