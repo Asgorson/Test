@@ -19,11 +19,18 @@ public class InnerClass {
         Car_2.ShowData();
         Car_2.typeCar.ShowData();
         Car_2.typeCar2.ShowData();
-        
-        //класс обявленный в функции//
+        */
+        /*
+        //тоже самое, что и строки выше, но компактнее
+        OutClassCar Car_3 = new OutClassCar("Subaru", 200_000);
+        Car_3.showAll(); // заменяет 3 строчки вывоада данных, этот метод выводит данные всех экзепляров двух классов
+        */
+        /*
+        //класс обявленный в функции, локальный класс//
         OutClassCar classInfunc = new OutClassCar(); 
         classInfunc.ClassInFunc(10);
         */
+        
         ////////////////////////////////////////////
         // работа с вложенным статическим классом //
         ////////////////////////////////////////////
@@ -32,6 +39,7 @@ public class InnerClass {
         System.out.printf("outerclass.getOuterClassVar: %d\n", innerclassObj.getOuterClassVar());
         innerclassObj.setOuterClassVar(99);
         System.out.printf("OuterClass.digit: %d\n", OuterClass.digit); 
+        
     }
 
 }
@@ -55,6 +63,11 @@ class OutClassCar{      //внешний класс, все его поля, в�
         typeCar2 = new InClassTypeCar("Mazda", 100);
 
     }
+    public void showAll(){
+        typeCar.ShowData();
+        typeCar2.ShowData();
+        this.ShowData();
+    }
 
     public void ShowData(){
         System.out.printf("Car name: %s\t Coast: %d\n", CarName, coast);
@@ -77,7 +90,7 @@ class OutClassCar{      //внешний класс, все его поля, в�
         }
     }
     ////////////////////////////////////////////////////////////
-    //          создание класса в функции                     //
+    //          создание класса в функции, локальный класс    //
     ////////////////////////////////////////////////////////////
     public void ClassInFunc(int something){
 
@@ -101,11 +114,7 @@ class OuterClass {
 
     static class InerClass{
         
-        public InerClass(){
-
-        }
-
-        int getOuterClassVar(){
+    int getOuterClassVar(){
             
             return OuterClass.digit; 
         }
