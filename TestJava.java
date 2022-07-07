@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class TestJava {
     public static void main (String args[]){
         /*
-        //----вывод всех символов кода UTF - 16------------------------//
+        //----вывод всех символов кодировки ASCII------------------------//
 
         char Ch = 0;
         for (int i=0; i<128; i++){
@@ -171,7 +171,8 @@ public class TestJava {
         */
         /*
         //------------------импорт + работа со статическим методом------//
-        System.out.printf("Result of sum: %d", JavaPackage.sum(2,3)); // как видно не создается объект класса
+        System.out.printf("Result of sum: %d", JavaPackage.sum(2,3)); // как видно если метод статический, 
+                                                                      // обращение идет напрямую к классу
         //--------------------------------------------------------------//
         */
     }

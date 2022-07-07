@@ -11,6 +11,7 @@ public class Inheritance {
         Driverity driverity_1 = new Driverity(123);
         driverity_1.SetName("Johnson");
         driverity_1.ShowDriverData();
+        driverity_1.Display();
     }
 }
 
@@ -65,6 +66,15 @@ class Driverity extends Humanity{
         this.age = age; 
     }
     public void ShowDriverData(){
-        System.out.printf("\nName: %s\t Age: %d", Name, age); 
+        System.out.printf("\nName: %s\t Age: %d\n", Name, age); 
+    }
+    /////////////////////////////////////////////////////////////
+    //            Переопределение метода Display()             //
+    /////////////////////////////////////////////////////////////
+    @Override
+    public void Display(){
+        System.out.printf("Data: \n");
+        super.Display();
+        System.out.printf("Age: %d", age); 
     }
 }
