@@ -30,7 +30,7 @@ class Human{
         System.out.printf("Name is: %s\n", Name);
     }
 }
-class Driver extends Human{
+final class Driver extends Human{       //запрет наследования данного класса final 
 
     public int age; 
 
