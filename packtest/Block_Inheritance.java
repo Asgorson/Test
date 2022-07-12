@@ -1,7 +1,5 @@
 package packtest;
 
-import org.hamcrest.DiagnosingMatcher;
-
 //////////////////////////////////////////
 //          Запрет наследования         //
 //          и переопределения           //
