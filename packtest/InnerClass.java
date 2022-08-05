@@ -114,8 +114,8 @@ class OuterClass {
 
     static class InerClass{
         
-    int getOuterClassVar(){
-            
+        int getOuterClassVar(){     
+               
             return OuterClass.digit; 
         }
         void setOuterClassVar(int var){

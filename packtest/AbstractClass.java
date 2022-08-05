@@ -10,10 +10,13 @@ public class AbstractClass{
         Employee sam = new Employee("Sam", "Leman Brothers");
         sam.display();
         Client bob = new Client("Bob", "Leman Brothers");
-        bob.display();
+        bob.display(); 
     }
 }
 abstract class Person {
+    //В абстрактном классе также можно определить поля и методы, но в то же время нельзя создать объект или 
+    //экземпляр абстрактного класса. Абстрактные классы призваны предоставлять базовый функционал для классов-наследников. 
+    //А производные классы уже реализуют этот функционал.
      
     private String name;
      
