@@ -56,13 +56,13 @@ enum Color{
     BLUE("#0000FF"),
     WHITE("#00FF00");
 
-    private String code ;
+    private String Code ;
 
     Color(String code){ // конструктор по умолчанию приватный
-        this.code=code; 
+        this.Code=code; 
     }
     public String GetCode(){
-        return code; 
+        return Code; 
     }
 }
 
