@@ -5,7 +5,7 @@ public class ObjectClass {
     public static void main(String args[]){
         
         Human Tom = new Human("Tom"); 
-        System.out.printf(Tom.toString());  //метод toString служит для представления объетка в виде строки. 
+        System.out.println(Tom.toString());  //метод toString служит для представления объетка в виде строки. 
                                             // для нормального представления данный метод нередко переопределяют. 
 
         System.out.println(Tom.hashCode()); //метод hashCode позволяет задать некоторе числовое значение, которое будет 
