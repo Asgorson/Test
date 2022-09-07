@@ -11,13 +11,14 @@ public class GenericsWork_2 {
         Clients Clnts_1 = new Clients(123,1200);
         AccountTable<Integer> Clnts_2 = new Clients(1234, 3200);
 
-        //использование обобщенного класса
-        Account<String> acc_1 = new Account<String>("war123", 30000);
-        Account<Integer> acc_2 = new Account<Integer>(551122, 40000);
+        //использование обобщенного класса 
+        Bank<String> acc_1 = new Bank<String>("war123", 30000);
+        Bank<Integer> acc_2 = new Bank<Integer>(551122, 40000);
         String row = acc_1.getId(); 
         System.out.printf("String id is: %s\n", row); 
         int row2 = acc_2.getId(); 
         System.out.printf("Integer id is: %d\n", row2); 
+
     }
     
 }
@@ -81,6 +82,11 @@ class Bank<Gg> implements AccountTable<Gg>{ //Определение обобщ�
     
     private Gg id;
     private int sum;
+
+    Bank(Gg id, int sum){
+        this.id = id; 
+        this.sum = sum; 
+    }
 
     public Gg getId(){
         return id;

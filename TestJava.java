@@ -1,4 +1,4 @@
-import packtest.*; // пример импорта созданного класса, см. папка Package
+//import packtest.*; // пример импорта созданного класса, см. папка Package
 import java.util.Scanner;
 
 public class TestJava {
