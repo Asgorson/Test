@@ -5,21 +5,20 @@ public class ObjectClass {
     public static void main(String args[]){
         
         Human Tom = new Human("Tom"); 
-        System.out.println(Tom.toString());  //метод toString служит для представления объетка в виде строки. 
+        System.out.println("toString() method: " + Tom.toString());  //метод toString служит для представления объетка в виде строки. 
                                             // для нормального представления данный метод нередко переопределяют. 
 
-        System.out.println(Tom.hashCode()); //метод hashCode позволяет задать некоторе числовое значение, которое будет 
+        System.out.println("hashCode() method: " + Tom.hashCode()); //метод hashCode позволяет задать некоторе числовое значение, которое будет 
                                             //соответствовать даанному объекту. По данному числу можно сравнивать объекты
 
-        System.out.println(Tom.getClass()); //метод позволяет получить тип данного объекта
+        System.out.println("getClass() method: " + Tom.getClass()); //метод позволяет получить тип данного объекта
         
         Human Tom_2 = new Human("Tom"); //метод equals сравнивает два объекта на равенство
-                                             //метод instanceof позволяет выяснить, является ли переданный объект
-                                             //объектом определенного класса
+                                             
         Human Max = new Human("Max");
 
-        System.out.println(Tom.equals(Tom_2)); 
-        System.out.println(Tom.equals(Max)); 
+        System.out.println("equals() method (Tom, Tom_2) : " + Tom.equals(Tom_2)); 
+        System.out.println("equals() method (Tom, Max) : " + Tom.equals(Max)); 
     }
 }
 
@@ -42,7 +41,8 @@ class Human{
 
     @Override 
     public boolean equals(Object obj){
-        if (!(obj instanceof Human)){
+        if (!(obj instanceof Human)){   //метод instanceof позволяет выяснить, является ли переданный объект
+                                        //объектом определенного класса
             return false;
         }
         Human h = (Human)obj;

@@ -14,6 +14,7 @@ public class GenericsWork_2 {
         //использование обобщенного класса 
         Bank<String> acc_1 = new Bank<String>("war123", 30000);
         Bank<Integer> acc_2 = new Bank<Integer>(551122, 40000);
+        AccountTable<Integer> acc_3 = new Bank<Integer>(123, 4000); //другой вариант объявления 
         String row = acc_1.getId(); 
         System.out.printf("String id is: %s\n", row); 
         int row2 = acc_2.getId(); 
