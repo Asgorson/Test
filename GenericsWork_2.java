@@ -2,8 +2,8 @@ public class GenericsWork_2 {
 
     public static void main(String args[]){
 
-        AccountTable<String> Acc_1 = new Accounts("123", 3400); 
-        Accounts Acc_2 = new Accounts("1243", 2000); 
+        AccountTable<String> Acc_1 = new Account_s("123", 3400); 
+        Account_s Acc_2 = new Account_s("1243", 2000); 
         System.out.printf("Acc_1 data: %s\n", Acc_1.getId());       
         System.out.printf("Acc_2 data: %s\n", Acc_2.getId());  
 
@@ -55,12 +55,12 @@ class Clients implements AccountTable<Integer>{ //Использование ж�
     }
 }
 
-class Accounts implements AccountTable<String>{ //Использование жесткой привязки к типу. 
+class Account_s implements AccountTable<String>{ //Использование жесткой привязки к типу. 
     
     private String id; 
     private int sum; 
 
-    Accounts (String id, int sum){
+    Account_s (String id, int sum){
         this.id = id; 
         this.sum = sum; 
     }
