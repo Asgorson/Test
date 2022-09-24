@@ -1,4 +1,5 @@
-import java.util.ArrayList; //реализация простого списка. Аналогичен безразмерному массиву.
+import java.util.ArrayList; //реализация простого однонаправленного списка. Аналогичен безразмерному массиву.
+                            //по умолчанию емкость равна 10. 
 public class ArrayList_Class {
     public static void main(String[] args){
         ArrayList<String> names = new ArrayList<String>(); 
@@ -26,8 +27,8 @@ public class ArrayList_Class {
         names.add("Petro");
         names.add("Suarez");
         ShowList(names);
-        names.remove("Tom"); //тут можно удалять объекты по следующим параметрам: -имени
-                             //                                                   -индексу 
+        names.remove("Tom");    //тут можно удалять объекты по следующим параметрам: -имени
+                                   //                                                  -индексу 
         ShowList(names);
         names.set(1,"Ivan"); //можно изменить необходимый элемент
         ShowList(names);   
