@@ -1,6 +1,7 @@
 import java.util.ArrayDeque;        //класс реализующий обобщенную двунаправленную очередь 
                                     //по умолчанию емкость очереди - 16.
                                     //это фактическая реалилзация стека 
+import java.util.Iterator;
 
 public class ArrayQueue_Deque_Class {
     public static void main(String[] args){
@@ -18,6 +19,11 @@ public class ArrayQueue_Deque_Class {
         System.out.println("Size of Qeue: " + countries.size());//получение размера очереди
         System.out.println("\nCountries: \n");
         System.out.println("Показывает и удаляет объект из начала очереди: " + countries.pop());
+
+        Iterator<String> i = countries.iterator();          //вывод всех элементов при помощи итератора
+        while(i.hasNext()){
+            System.out.println(i.next());
+        }
         /*
         while(countries.peek()!=null){           //возвращает элемент без удаления из начала очереди peek(). Если очередь пуста возваращает null.
             System.out.println(countries.pop()); //получение элемента из начала очереди с удалением. Вместо pop() можно использовать poll().
