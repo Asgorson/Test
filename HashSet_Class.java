@@ -55,10 +55,9 @@ class List_Of_Driver {
         this.name = name;
         this.age = age;
     }
-    List_Of_Driver(){};
-    {
-        this.name ="Undefined";
-        this.age =0; 
+    List_Of_Driver(){
+        this.name = "Undefined";
+        this.age = 0; 
     }
     public void showInfo(){
         System.out.println("Name: " + name + "\tAge: " + age);
