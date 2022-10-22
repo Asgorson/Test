@@ -1,12 +1,11 @@
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 public class HashSet_Class {    //Представляет собой неупорядоченное множество. Основан на hesh-таблице
                                 //В нем хранятся только уникальные элементы по возрастанию или NUll, повтор их невозможен.
                                 //Порядок добавления элементов вычисляется с помощью hash-кода.
                                 //Можно использовать методы реализованные в родительских классах.
     public static void main(String[] args){
-        HashSet<String> Figures = new HashSet<String>(10, 0.5f); //в скобках указывается начальная екмкость, 
+        Set<String> Figures = new HashSet<String>(10, 0.5f); //в скобках указывается начальная екмкость, 
                                                                                              //а также коэф. загрузки, то есть если 
                                                                                              //загрузка достигнет этого коэффициента 
                                                                                              //множество расширится в два раза.
@@ -37,7 +36,7 @@ public class HashSet_Class {    //Представляет собой неупо
         }else {
             System.out.println("Set isn't empty.");
         }
-        HashSet<List_Of_Driver> DriverSet = new HashSet<List_Of_Driver>();  
+        Set<List_Of_Driver> DriverSet = new HashSet<List_Of_Driver>();  
         DriverSet.add(new List_Of_Driver("Shumaher", 44));
         DriverSet.add(new List_Of_Driver("Manchini", 25));
         DriverSet.add(new List_Of_Driver("Shumaher", 43));
