@@ -11,7 +11,7 @@ public class LambdaExpression {
                y = 20;
     public static void main(String[] args){
 
-        SomeOperation SomOp = (x,y)->x+y;
+        SomeOperation SomOp = (xx,yy)->xx+yy;
         int result = SomOp.calculate(10, 12);
         System.out.println("Result is: " + result);
 
@@ -51,7 +51,7 @@ public class LambdaExpression {
         // m = 100 за пределами выражения тоже нельзя изменить значение переменной
         System.out.println("Result is: " + SomOp_2.calculate());
 
-        //Использование обобщенного функционального интерфейса 
+        //Пример 3. Использование обобщенного функционального интерфейса 
         SomeOperation_4<Integer> SomOp_4_1 = (x, y)-> x + y;
         System.out.println("Result is: " + SomOp_4_1.calculate(33, 55));
 
