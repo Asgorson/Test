@@ -33,7 +33,7 @@ public class StringWork_1 {
         System.out.println(someChar);
 
         /*
-         * Метод getChars(scrBegin, srcEnd, dst, dstBegin) необходим для извлечения группы сиволов или подстроки
+         * Метод getChars(scrBegin, srcEnd, dst, dstBegin) необходим для извлечения группы символов или подстроки
          */
         String str_3 = "Hello world!";
         char[] arrOfChar = new char[6]; 
@@ -43,7 +43,7 @@ public class StringWork_1 {
         /*
          * Сравнение строк
          * Метод equals() и equalsIgnoreCase()
-         * Для сравнения строк не может применяться опреанд ==, вместо него используется вышеуказанные методы
+         * Для сравнения строк не может применяться оператор ==, вместо него используется вышеуказанные методы
          */
         String str_4 = "hello";
         String str_5 = "Hello";
