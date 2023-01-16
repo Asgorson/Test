@@ -47,6 +47,12 @@ public class StringWork_1 {
          */
         String str_4 = "hello";
         String str_5 = "Hello";
+        if (str_4==str_5){
+            System.out.println("RESULT IS TRUE.");
+        }else{
+            System.out.println("RESULT IS FALSE.");
+        }
+        
         System.out.println(str_4.equals(str_5));
         System.out.println(str_4.equalsIgnoreCase(str_5));
 
