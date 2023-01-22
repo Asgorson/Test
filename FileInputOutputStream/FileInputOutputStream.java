@@ -17,12 +17,13 @@ public class FileInputOutputStream {
     public static void main(String[] args){
         
         String Text = "Hello world. Goodbye uderworld.",
-               FilePath = "S://Programming/Java_projects/Test/FileOutputInputTest/FOstream.txt",
-               Text_2 = "Legends never die.";
+               Text_2 = "Legends never die.", 
+               FilePath = "S://Programming/Java_projects/Test/FileInputOutputStream/Docs/FOstream.txt";
+               
 
         try (FileOutputStream FOStream = new FileOutputStream(FilePath)){
             byte[] buffer = Text.getBytes();
-            FOStream.write(buffer, 3, buffer.length - 3);
+            FOStream.write(buffer, 6, buffer.length-6);
             FOStream.close();
         } catch(IOException ex){
             System.out.println(ex.getMessage());
@@ -35,6 +36,8 @@ public class FileInputOutputStream {
         }catch(IOException ex){
             System.out.println(ex.getMessage());
         }
+
+        
 
     }
 }
