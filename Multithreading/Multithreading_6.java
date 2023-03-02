@@ -21,7 +21,7 @@ public class Multithreading_6 {
 
 class someProc implements Runnable{
 
-    /*someProc(String name){
+    /*someProc(String name){        //при имплементировании интерфейса runnable, установление имени потока идет через метод threadName.setName(), или при создании объекта;
         super(name);
     }*/
 

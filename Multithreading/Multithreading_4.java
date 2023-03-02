@@ -14,7 +14,8 @@ public class Multithreading_4 {
         fThread.start();
         //System.out.println("\t");
         sThread.start();
-        try{                                         //чтобы главнй поток завершался в конце, необходимо после инициализации дочерних потоков использовать метод join()
+        try{    
+            fThread.join();                                     //чтобы главнй поток завершался в конце, необходимо после инициализации дочерних потоков использовать метод join()
             sThread.join();                         
         }catch(Exception ex){                        
             ex.printStackTrace();
@@ -32,11 +33,11 @@ class Thread_1 extends Thread{
     }
     public void run(){
        
-        for(int i=0; i<40; i++){
+        for(int i=0; i<10; i++){
             LocalTime LocTime = LocalTime.now();
             System.out.printf("%d\t%s\tTime: %s\n", i, Thread.currentThread().getName(), LocTime);
             try{
-                Thread.sleep(100);
+                Thread.sleep(1000);
             }catch(Exception ex){
                 ex.printStackTrace();
             }
@@ -52,11 +53,11 @@ class Thread_2 extends Thread{
 
     public void run(){
         
-        for(int i=0; i<40; i++){
+        for(int i=0; i<10; i++){
             LocalTime LocTime = LocalTime.now();
             System.out.printf("%d\t%s\tTime: %s\n", i, Thread.currentThread().getName(), LocTime);
             try{
-                Thread.sleep(100);
+                Thread.sleep(1000);
             }catch(Exception ex){
                 ex.printStackTrace();
             }
