@@ -24,21 +24,21 @@ public class FileInputOutputStream_1 {
         
         String Text = "Hello world. ",
                Text_2 = "Goodbye underworld.", 
-               FilePath = "S:/Programming/Java_projects/JavaCore/FileInputOutputStream/Docs/FOstream.txt";
+               FilePath = "S:/Programming/Java_projects/JavaCore/FileInputOutputStream/Docs/FOutputStream.txt";
                
 
-        try (FileOutputStream FOStream = new FileOutputStream(FilePath)){
-            byte[] buffer = Text.getBytes();
+        try (FileOutputStream FOStream = new FileOutputStream(FilePath)){   //Создание объкта в скобках конструкции создания исключения - это так называемый метод try-with resources
+            byte[] buffer = Text.getBytes();                                //при котором, нет необходимости закрывать поток методом close(). Он закрывается автоматически. 
             FOStream.write(buffer, 0, buffer.length);
-            FOStream.close();
-        } catch(IOException ex){
+            //FOStream.close();     //не надо здесь его указывать, так как закрытие потока происходит автоматически. См. предыдущий коментарий. Если бы объект создавался не в 
+        }catch(IOException ex){    //в скобках, тогда закрывать поток необходимо в блоке finally{}, см. пример 3. 
             System.out.println(ex.getMessage());
         }
 
         try (FileOutputStream FOStream_2 = new FileOutputStream(FilePath, true)){
             byte[] buffer = Text_2.getBytes();
             FOStream_2.write(buffer, 0, buffer.length);
-            FOStream_2.close();
+            //FOStream_2.close();
         }catch(IOException ex){
             System.out.println(ex.getMessage());
         }

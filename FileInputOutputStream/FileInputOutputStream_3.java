@@ -12,7 +12,7 @@ public class FileInputOutputStream_3 {
      */
     public static void main(String[] args){
 
-        String filePath = "S:/Programming/Java_projects/JavaCore/FileInputOutputStream/Docs/FOstream.txt";
+        String filePath = "S:/Programming/Java_projects/JavaCore/FileInputOutputStream/Docs/FOutputStream.txt";
         FileInputStream readFile = null;
 
         try{

@@ -28,7 +28,7 @@ public class FileInputOutputStream_5 {
             System.out.print((char)s);
         }
 
-        try(FileOutputStream fos = new FileOutputStream("Docs/Hello.txt")){
+        try(FileOutputStream fos = new FileOutputStream("Docs/ByteArrayOutputStreamDoc.txt")){
             someByteArray.writeTo(fos);
         }catch(Exception ex){
             System.out.println(ex.getMessage());

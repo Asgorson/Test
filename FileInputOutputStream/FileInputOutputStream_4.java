@@ -18,14 +18,33 @@ class FileInputOutputStream_4{
         while((b=someByteStream.read())!=-1){
             System.out.print((char)b);
         }
-        
+        System.out.println();
         String text = "Hello world! ";
         byte array_2[] = text.getBytes();
         ByteArrayInputStream byteStream_2 = new ByteArrayInputStream(array_2);
-        
-        System.out.println();
         while((b=byteStream_2.read())!=-1){
             System.out.print((char)b);
+        }
+        /*
+         * Пример работы с некоторым файлом. 
+         * Производится получение байтов данных из файла объектом ByteArrayInputStream. 
+         */
+        String path = "S:/Programming/Java_projects/JavaCore/FileInputOutputStream/Docs/FOutputStream.txt";
+
+        try(FileInputStream readFile = new FileInputStream(path)){
+            byte someBuff[] = new byte[readFile.available()];
+            int f; 
+
+            readFile.read(someBuff);
+            ByteArrayInputStream byteArr = new ByteArrayInputStream(someBuff);
+           
+            System.out.println("Data from file: \n");
+            while((f =byteArr.read())!=-1){
+                System.out.print((char)f);
+            }
+
+        }catch(IOException ex){
+            System.out.println(ex.getMessage());
         }
     }
 }
