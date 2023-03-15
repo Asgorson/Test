@@ -34,11 +34,11 @@ class FileInputOutputStream_4{
         try(FileInputStream readFile = new FileInputStream(path)){
             byte someBuff[] = new byte[readFile.available()];
             int f; 
-
-            readFile.read(someBuff);
+            someBuff = readFile.readAllBytes(); //можно исопльзовать оба способа 
+            // readFile.read(someBuff);     
             ByteArrayInputStream byteArr = new ByteArrayInputStream(someBuff);
            
-            System.out.println("Data from file: \n");
+            System.out.println("\nData from file: \n");
             while((f =byteArr.read())!=-1){
                 System.out.print((char)f);
             }

@@ -1,0 +1,3 @@
+Hello world! 
+Java is cool!
+Good morning!
